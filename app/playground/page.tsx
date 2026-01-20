@@ -22,8 +22,8 @@ export default function Playground() {
   useEffect(() => {
     const initClients = async () => {
       try {
-        const eClient = await Client.connect("E1011au/EmotionAI");
-        const dClient = await Client.connect("E1011au/FaceDetectAI");
+        const eClient = await client("E1011au/EmotionAI");
+        const dClient = await client("E1011au/FaceDetectAI");
         setEmotionClient(eClient);
         setDetectClient(dClient);
       } catch (err) {
